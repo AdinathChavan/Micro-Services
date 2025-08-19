@@ -1,0 +1,17 @@
+spring.application.name=Service-one
+
+
+spring.datasource.url=jdbc:oracle:thin:@localhost:1521:xe
+spring.datasource.username=system
+spring.datasource.password=java
+
+server.port=4000
+server.servlet.context-path=/service
+
+
+# Eureka properties
+eureka.instance.prefer-ip-address=true
+eureka.instance.hostname=localhost
+eureka.instance.instance-id=${spring.application.name}:${server.port}
+
+eureka.client.serviceUrl.defaultZone=http://localhost:8761/registry/eureka/
